@@ -1,1 +1,1 @@
-export default "hello world!";
+console.log("hello world");
