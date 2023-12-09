@@ -1,0 +1,27 @@
+name: ESLint
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: ["main"]
+
+jobs:
+  prettier:
+    name: Run prettier
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Prettier
+        run: |
+          npm install prettier
+
+      - name: Run Prettier
+        run: npx prettier . --check
+        continue-on-error: true
