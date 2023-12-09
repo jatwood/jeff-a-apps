@@ -1,1 +1,1 @@
-export default "foo" * 5;
+export default "hello world!";
