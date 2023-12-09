@@ -1,0 +1,15 @@
+{
+  "name": "jeff-atwood-applications",
+  "version": "1.0.0",
+  "description": "Monorepo containing my side projects and their shared configuration",
+  "author": "Jeff Atwood",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/newline-coverter"
+  ]
+}

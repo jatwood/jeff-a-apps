@@ -1,0 +1,10 @@
+{
+  "name": "newline-coverter",
+  "version": "1.0.0",
+  "description": "Chrome extension to newline-separated lists into structured data.",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "Jeff Atwood",
+  "license": "ISC",
+  "type": "module"
+}
