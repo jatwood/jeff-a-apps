@@ -14,6 +14,6 @@
   },
   "type": "module",
   "workspaces": [
-    "packages/newline-coverter"
+    "packages/newline-converter"
   ]
 }

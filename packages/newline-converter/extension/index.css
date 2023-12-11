@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.popup-container {
+    width: 400px;
+    height: 300px;
+}
+
+#perms-asker {
+    & .prompt {
+        display: none;
+    }
+    &:--prompt .prompt {
+        display: block;
+    }
+
+    & .granted {
+        display: none;
+    }
+    &:--granted .granted {
+        display: block;
+    }
+
+    & .denied {
+        display: none;
+    }
+    &:--denied .denied {
+        display: block;
+    }
+}

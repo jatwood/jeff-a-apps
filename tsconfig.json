@@ -2,5 +2,5 @@
   "extends": "./tsconfig.options.json",
   "files": [],
   "include": [],
-  "references": [{ "path": "./packages/newline-coverter" }]
+  "references": [{ "path": "./packages/newline-converter" }]
 }
