@@ -3,9 +3,12 @@
   "name": "Newlines Converter",
   "description": "Convert pasted newline-separated lists into a structured format.",
   "version": "1.0",
-  "action": {
-    "default_icon": "extension/icon.png",
-    "default_popup": "extension/index.html"
+  "permissions": [],
+  "background": {
+    "service_worker": "dist/worker.js",
+    "type": "module"
   },
-  "permissions": []
+  "action": {
+    "default_icon": "list-solid.png"
+  }
 }

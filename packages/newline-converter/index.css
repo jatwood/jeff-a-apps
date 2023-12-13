@@ -1,0 +1,42 @@
+:root {
+    --container-desktop-width: 70rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+}
+
+.title {
+    flex: 1;
+}
+
+.author {
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 80rem) {
+    .container {
+        max-width: var(--container-desktop-width);
+        padding: 0;
+    }
+}

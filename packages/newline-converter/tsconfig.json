@@ -3,7 +3,7 @@
   "include": ["./src/**/*.ts"],
   "compilerOptions": {
     "composite": true,
-    "outDir": "./extension/dist",
+    "outDir": "./dist",
     "rootDir": "./src",
     "lib": ["esnext", "dom"],
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
