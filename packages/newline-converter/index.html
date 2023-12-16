@@ -3,13 +3,20 @@
     <head>
         <title>Newline converter</title>
         <link rel="stylesheet" href="index.css">
+        <script type="module" src="dist/index.js"></script>
     </head>
     <body>
         <div class="container">
             <header class="header">
                 <h2 class="title">Newline converter</h2>
-                <div class="author">Jeff Atwood</div>
+                <div class="author">by Jeff Atwood</div>
             </header>
+            <form class="pasteInput" name="pasteForm">
+                <textarea rows="25" cols="80" name="list"></textarea>
+                <div class="submitButton">
+                    <button type="submit">Convert and copy</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
