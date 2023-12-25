@@ -8,6 +8,9 @@
     --color-neutral-light: #7c8a8a;
     --color-error-red: #cc122b;
     --color-success-green: #14e040;
+
+    --font-size-success: 1rem;
+    --font-size-error: 1rem;
 }
 
 * {
@@ -31,6 +34,18 @@ h2 {
     line-height: 1.5;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: calc(var(--spacing) * 1.5) 0;
+}
+
 .header {
     margin: 2rem 0;
 }
@@ -44,6 +59,7 @@ h2 {
     font-size: 1rem;
     display: inline-block;
     margin-left: var(--spacing);
+    color: var(--color-neutral-light);
 }
 
 button {
@@ -69,6 +85,12 @@ button {
 
     & .submitButton {
         margin: 1rem 0;
+        display: flex;
+        align-items: center;
+
+        & clipboard-result {
+            margin-left: var(--spacing);
+        }
     }
 
     & textarea {
@@ -80,7 +102,7 @@ button {
             outline: solid 2px var(--color-neutral-dark);
         }
     }
-} 
+}
 
 @media screen and (min-width: 80rem) {
     .container {

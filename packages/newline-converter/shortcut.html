@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Newline converter</title>
+        <link rel="stylesheet" href="index.css">
+        <script type="module" src="dist/shortcut.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 class="title">Newline converter</h2>
+                <div class="author">by Jeff Atwood</div>
+            </header>
+            <if-prompt>
+                <section slot="body" style="display: none;">
+                    <h3>
+                        Grant permissions
+                    </h3>
+                    <p>
+                        Please allow Newline Converter to read from your clipboard when prompted by Chrome. This will allow 
+                        the extension to automatically convert lists to JSON and write them to your clipboard when you use the shortcut
+                        in the future. Newline Converter will not share this information with third parties or store it outside of your device.
+                    </p>
+                </section>    
+            </if-prompt>
+            <clipboard-result></clipboard-result>
+        </div>
+    </body>
+</html>

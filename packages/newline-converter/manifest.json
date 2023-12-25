@@ -10,5 +10,13 @@
   },
   "action": {
     "default_icon": "list-solid.png"
+  },
+  "commands": {
+    "copy-json": {
+      "suggested_key": {
+        "default": "Alt+Shift+J"
+      },
+      "description": "Convert a list of values into a JSON array and write it to your clipboard."
+    }
   }
 }
