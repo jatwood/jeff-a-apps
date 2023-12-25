@@ -62,6 +62,22 @@ p {
     color: var(--color-neutral-light);
 }
 
+.conversionType {
+    font-size: 1rem;
+    margin: calc(var(--spacing) * 2) 0;
+
+    & select {
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        color: var(--color-neutral-dark);
+        border: solid 1px var(--color-neutral-light);
+
+        &:focus-visible {
+            outline: solid 2px var(--color-neutral-dark);
+        }
+    }
+}
+
 button {
     background-color: var(--color-primary);
     padding: 0.5rem 1rem;

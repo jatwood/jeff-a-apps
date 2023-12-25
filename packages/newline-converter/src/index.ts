@@ -1,5 +1,9 @@
 import ClipboardResult from "./ClipboardResult.js";
-import { convertToJSONAndCopy, setClipboardResultState } from "./utils.js";
+import {
+  convertToJSONAndCopy,
+  convertToSQLAndCopy,
+  setClipboardResultState,
+} from "./utils.js";
 
 const form = document.querySelector('form[name="pasteForm"]');
 if (!(form instanceof HTMLFormElement)) {
@@ -17,7 +21,15 @@ form.addEventListener("submit", async (ev) => {
       throw new Error();
     }
     const value = inputElem.value;
-    await convertToJSONAndCopy(value);
+    const typeElem = document.getElementById("conversion-type");
+    if (!(typeElem instanceof HTMLSelectElement)) {
+      throw new Error();
+    }
+    if (typeElem.value === "json") {
+      await convertToJSONAndCopy(value);
+    } else if (typeElem.value === "sql") {
+      await convertToSQLAndCopy(value);
+    }
 
     setClipboardResultState("SUCCESS");
   } catch (e) {
@@ -40,7 +52,7 @@ clipboardResultElems.forEach((elem) => {
   const successSlot = document.createElement("div");
   successSlot.setAttribute("slot", "success");
   successSlot.appendChild(
-    new Text("The list was copied to your clipboard as JSON.")
+    new Text("The list was formatted and copied to your clipboard.")
   );
 
   const errorSlot = document.createElement("div");

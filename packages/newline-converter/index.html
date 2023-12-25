@@ -13,6 +13,15 @@
             </header>
             <form class="pasteInput" name="pasteForm">
                 <textarea rows="25" cols="80" name="list"></textarea>
+                <div class="conversionType">
+                    <label for="conversion-type">
+                        Type of list
+                    </label>
+                    <select name="type" id="conversion-type">
+                        <option value="json">JSON</option>
+                        <option value="sql">SQL</option>
+                    </select>    
+                </div>
                 <div class="submitButton">
                     <button type="submit">Convert and copy</button>
                     <clipboard-result></clipboard-result>

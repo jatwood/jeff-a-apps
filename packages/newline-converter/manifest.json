@@ -17,6 +17,12 @@
         "default": "Alt+Shift+J"
       },
       "description": "Convert a list of values into a JSON array and write it to your clipboard."
+    },
+    "copy-sql": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Convert a list of values into a SQL list and write it to your clipboard."
     }
   }
 }

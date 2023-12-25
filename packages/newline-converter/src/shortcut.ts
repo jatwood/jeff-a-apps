@@ -1,6 +1,13 @@
 import ClipboardResult from "./ClipboardResult.js";
-import { convertToJSONAndCopy, setClipboardResultState } from "./utils.js";
+import {
+  convertToJSONAndCopy,
+  convertToSQLAndCopy,
+  setClipboardResultState,
+} from "./utils.js";
 import "./IfPrompt.js";
+
+const conversionType =
+  new URLSearchParams(window.location.search).get("conversion-type") || "json";
 
 const ifPromptBodySlot = document.querySelector(
   'if-prompt section[slot="body"]'
@@ -16,7 +23,9 @@ clipboardResultElems.forEach((elem) => {
   successSlot.setAttribute("slot", "success");
   successSlot.appendChild(
     new Text(
-      "The list was copied to your clipboard as JSON. You may close this tab."
+      `The list was copied to your clipboard as ${
+        conversionType === "sql" ? "SQL" : "JSON"
+      }. You may close this tab.`
     )
   );
 
@@ -33,7 +42,11 @@ clipboardResultElems.forEach((elem) => {
 
 try {
   const txt = await navigator.clipboard.readText();
-  await convertToJSONAndCopy(txt);
+  if (conversionType === "json") {
+    await convertToJSONAndCopy(txt);
+  } else if (conversionType === "sql") {
+    await convertToSQLAndCopy(txt);
+  }
   setClipboardResultState("SUCCESS");
 } catch (e) {
   setClipboardResultState("ERROR");

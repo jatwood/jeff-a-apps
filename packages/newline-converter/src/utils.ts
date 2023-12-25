@@ -12,11 +12,22 @@ export function setClipboardResultState(
   });
 }
 
-export async function convertToJSONAndCopy(txt: string) {
-  const lines = txt
+function splitLines(txt: string) {
+  return txt
     .split(/[\r\n]+/)
     .map((line) => line.trim())
     .filter((str) => str);
+}
+
+export async function convertToJSONAndCopy(txt: string) {
+  const lines = splitLines(txt);
 
   await navigator.clipboard.writeText(JSON.stringify(lines));
+}
+
+export async function convertToSQLAndCopy(txt: string) {
+  const lines = splitLines(txt);
+  await navigator.clipboard.writeText(
+    `(${lines.map((line) => `'${line}'`).join(",")})`
+  );
 }
