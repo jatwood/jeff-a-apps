@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Newline converter</title>
+        <title>Copy Hero</title>
         <link rel="stylesheet" href="index.css">
         <script type="module" src="dist/index.js"></script>
     </head>
     <body>
         <div class="container">
             <header class="header">
-                <h2 class="title">Newline converter</h2>
+                <h2 class="title">Copy Hero</h2>
                 <div class="author">by Jeff Atwood</div>
             </header>
+            <p>
+                Copy Hero is a simple utility to convert a list of items, one on each line, to a list in a structured data format and copy it to your clipboard.
+                This makes it easy to copy a list from a notes application or a spreadsheet and paste it into a  Javascript script as a JSON array or in a SQL statement
+                as a list of values. 
+            </p>
+            <p>
+                The extension can be run either by manually pasting in the input list into the form input, or by using a shortcut
+                to automatically read the list from your clipboard. The latter requires granting permission to Copy Hero to
+                read from your clipboard the first time you use the shortcut. The default shortcuts are <code>Alt+Shift+J</code> to
+                copy as JSON, and <code>Alt+Shift+S</code> to copy as SQL. On MacOS <code>Alt</code> is <code>Opt</code>.
+            </p>
             <form class="pasteInput" name="pasteForm">
                 <textarea rows="25" cols="80" name="list"></textarea>
                 <div class="conversionType">

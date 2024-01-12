@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Newlines Converter",
+  "name": "Copy Hero",
   "description": "Convert pasted newline-separated lists into a structured format.",
   "version": "1.0",
   "permissions": [],
@@ -9,7 +9,7 @@
     "type": "module"
   },
   "action": {
-    "default_icon": "list-solid.png"
+    "default_icon": "icon16.png"
   },
   "commands": {
     "copy-json": {

@@ -33,7 +33,7 @@ clipboardResultElems.forEach((elem) => {
   errorSlot.setAttribute("slot", "error");
   errorSlot.appendChild(
     new Text(
-      "Could not read from the clipboard. Please grant permission for Newline Converter to read your clipboard in order to enable the JSON conversion shortcut."
+      "Could not read from the clipboard. Please grant permission for Copy Hero to read your clipboard in order to enable the JSON conversion shortcut."
     )
   );
 
