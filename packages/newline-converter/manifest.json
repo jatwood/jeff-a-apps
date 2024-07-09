@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Copy Hero",
-  "description": "Convert pasted newline-separated lists into a structured format.",
-  "version": "1.0",
+  "description": "Convert newline-separated lists into JSON or a SQL value list and copy it to your clipboard.",
+  "version": "1.0.0",
   "permissions": [],
   "background": {
     "service_worker": "dist/worker.js",
