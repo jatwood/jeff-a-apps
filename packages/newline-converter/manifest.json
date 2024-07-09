@@ -8,6 +8,10 @@
     "service_worker": "dist/worker.js",
     "type": "module"
   },
+  "icons": {
+    "16": "icon16.png",
+    "128": "app_icon.png"
+  },
   "action": {
     "default_icon": "icon16.png"
   },
