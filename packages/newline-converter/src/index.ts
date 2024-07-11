@@ -33,6 +33,7 @@ form.addEventListener("submit", async (ev) => {
 
     setClipboardResultState("SUCCESS");
   } catch (e) {
+    console.log("hi", e);
     setClipboardResultState("ERROR");
   }
 
